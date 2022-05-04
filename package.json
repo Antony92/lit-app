@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "@lit-labs/router": "^0.0.1",
-    "urlpattern-polyfill": "^4.0.3",
     "lit": "^2.2.3",
     "rxjs": "^7.5.5"
   },
