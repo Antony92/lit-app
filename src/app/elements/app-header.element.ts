@@ -21,7 +21,7 @@ export class AppHeader extends LitElement {
 	@property({ type: String, attribute: 'app-title' })
 	appTitle = 'AppTitle'
 
-	protected render() {
+	override render() {
 		return html`
 			<header>
 				<span class="title">${this.appTitle}</span>

@@ -15,7 +15,7 @@ export class AppForm extends LitElement {
         this.dispatchEvent(new CustomEvent('app-form-change', { bubbles: true, composed: true, detail: json }))
     }
 
-	protected render() {
+	override render() {
 		return html`
             <form @change=${(event: Event) => this.handleFormChange(event)}>
                 <label for="name">Name:</label><br>

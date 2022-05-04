@@ -27,7 +27,7 @@ export class AppDialog extends LitElement {
 	@property({ type: Boolean })
 	modal = false
 
-	protected firstUpdated() {
+	override firstUpdated() {
 		if (!this.modal) {
 			this.dialog.addEventListener('click', (e: Event) => {
 				if (!this.modal && e.target === this.dialog) {
@@ -54,7 +54,7 @@ export class AppDialog extends LitElement {
 		this.dispatchEvent(new CustomEvent('dialog-close', { bubbles: true, composed: true, detail }))
 	}
 
-	protected render() {
+	override render() {
 		return html`
 			<dialog id="dialog">
 				<div>

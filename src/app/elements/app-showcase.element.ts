@@ -19,7 +19,7 @@ export class AppShowcase extends LitElement {
         this.addEventListener('app-search', (e: Event) => console.log('app-search', e))
 	}
 
-	protected render() {
+	override render() {
 		return html`${choose(this.component, [
 			['default', () => html`<h1>Component tests</h1>`],
 			['table', () => {

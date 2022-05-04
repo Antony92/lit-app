@@ -13,7 +13,7 @@ export class AppAutocomplete extends LitElement {
 	@state()
 	private products = []
 
-	protected firstUpdated() {
+	override firstUpdated() {
 		fromEvent(this.searchInput, 'keyup')
 			.pipe(
 				startWith(''),
@@ -29,7 +29,7 @@ export class AppAutocomplete extends LitElement {
         this.dispatchEvent(new CustomEvent('app-search', { bubbles: true, composed: true, detail: product }))
     }
 
-	protected render() {
+	override render() {
 		return html`
 			<label for="search">Search</label>
 			<input type="text" id="search" />

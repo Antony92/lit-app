@@ -28,7 +28,7 @@ export class AppTable extends LitElement {
 	@state()
 	private products = []
 
-	connectedCallback() {
+	override connectedCallback() {
 		super.connectedCallback()
 		this.loadProducts()
 	}
@@ -42,7 +42,7 @@ export class AppTable extends LitElement {
 		this.requestUpdate()
 	}
 
-	protected render() {
+	override render() {
 		return html`
 			<table>
 				<tr>

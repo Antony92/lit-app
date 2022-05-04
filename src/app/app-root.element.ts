@@ -50,7 +50,7 @@ export class AppRoot extends LitElement {
         { path: '/*', render: () => html`<h1>Not found</h1>` },
 	])
 
-	protected render() {
+	override render() {
 		return html`
 			<div class="container">
 				<app-header class="header" app-title="App"></app-header>

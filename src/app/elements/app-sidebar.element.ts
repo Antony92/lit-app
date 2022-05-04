@@ -19,7 +19,7 @@ export class AppSidebar extends LitElement {
 		}
 	`
 
-	protected render() {
+	override render() {
 		return html`
 			<nav>
 				<ul>
