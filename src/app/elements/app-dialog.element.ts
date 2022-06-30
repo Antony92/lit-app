@@ -19,7 +19,7 @@ export class AppDialog extends LitElement {
 	`
 
 	@query('#dialog')
-	private dialog!: HTMLDialogElement | any
+	private dialog!: HTMLDialogElement
 
 	@property({ type: String, attribute: 'dialog-title' })
 	dialogTitle = 'Dialog'
@@ -35,7 +35,7 @@ export class AppDialog extends LitElement {
 				}
 			})
 		}
-		this.querySelectorAll('button[dialog-close]')?.forEach((element) => {
+		this.renderRoot.querySelectorAll('button[dialog-close]')?.forEach((element) => {
 			element.addEventListener('click', () =>
 				this.close({
 					result: element.getAttribute('dialog-close'),
