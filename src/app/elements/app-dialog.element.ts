@@ -35,7 +35,7 @@ export class AppDialog extends LitElement {
 				}
 			})
 		}
-		this.renderRoot.querySelectorAll('button[dialog-close]')?.forEach((element) => {
+		this.querySelectorAll('button[dialog-close]')?.forEach((element) => {
 			element.addEventListener('click', () =>
 				this.close({
 					result: element.getAttribute('dialog-close'),
